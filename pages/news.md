@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: news
 title: News
 permalink: /news
 section: news

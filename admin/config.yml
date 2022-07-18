@@ -11,9 +11,9 @@ publish_mode: editorial_workflow # Enable drafts
 
 collections: # A list of collections the CMS should be able to edit
   # POSTS
-  - name: "news" # Used in routes, ie.: /admin/collections/:slug/edit
+  - name: "story" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "News" # Used in the UI, ie.: "New Post"
-    folder: "_posts" # The path to the folder where the documents are stored
+    folder: "_posts/news" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -25,16 +25,18 @@ collections: # A list of collections the CMS should be able to edit
         name: "author"
         widget: "select"
         options:
-          - { label: "Dan Urbanowicz", value: "dan_urbanowicz" }
-          - { label: "John Doe", value: "john_doe" }
+          - { label: "Outcasts Admin", value: "outcasts_admin" }
+          - { label: "Dickon Tolson", value: "dickon_tolson" }
+          - { label: "Lance Steen Anthony Nielsen", value: "lance" }
+          - { label: "Suzette Pluck", value: "suzette_pluck" }
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
       - {label: "Intro Paragraph", name: "intro_paragraph", widget: "markdown", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Categories", name: "categories", widget: "string", required: false}
   # PRODUCTIONS
-  - name: "productions" # Used in routes, ie.: /admin/productions/:slug/edit
+  - name: "production" # Used in routes, ie.: /admin/productions/:slug/edit
     label: "Productions" # Used in the UI, ie.: "New Production"
-    folder: "_productions" # The path to the folder where the documents are stored
+    folder: "_posts/production" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -47,9 +49,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Categories", name: "categories", widget: "string", required: false}
     # CLASSES
-  - name: "classes" # Used in routes, ie.: /admin/productions/:slug/edit
+  - name: "class" # Used in routes, ie.: /admin/productions/:slug/edit
     label: "Classes" # Used in the UI, ie.: "New Production"
-    folder: "_classes" # The path to the folder where the documents are stored
+    folder: "_posts/class" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
