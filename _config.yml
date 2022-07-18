@@ -83,3 +83,12 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+#collections stuff
+collections:
+  class:
+    output: true
+  production:
+    output: true
+  news:
+    output: true

@@ -10,48 +10,25 @@ layout: default
 
 <section>
 
-  <h3>
-    {% assign categories_array = "" | split:"|" %}
-    {% for post in site.posts %}
-       label =  {{ post.label }}<br/>
-    {% endfor %}
-  </h3>
-section = {{page.section}}
-    {%if page.section == 'productions' %}
-      
-      {% assign items = site.productions %}
-      {% assign item = site.production %}
-    {%elsif page.section == 'news'%}
-      
-      <!-- {% assign items = site.stories %}
-      {% assign item = site.story %} -->
-    {%else %}
-      
-      <!-- {% assign items = site.classes %}
-      {% assign item = site.class %} -->
-    
-    {% endif %}
-
- 
+  <h3>Stories</h3>
 
   <ul>
-    {% for post in site.posts %}
-      {{ post.label }}k<br/>
-      {% if post.label == 'story' %}
-        {% assign author = site.data.authors[post.author] %}
+    {% for item in site.news %}
+      
+        {% assign author = site.data.authors[item.author] %}
           <li>
-            <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+            <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
             <time datetime="{{ itpostem.date }}">
               <small>
-                <strong>{{ post.date | date_to_string }}</strong>
+                <strong>{{ item.date | date_to_string }}</strong>
                 {% if author %}
-                  by {{ post.name }}
+                  by {{ item.name }}
                 {% endif %}
               </small>
             </time>
             {{ post.excerpt | strip_newlines | truncate: 180 }}
           </li>
-      {% endif %}
+
     {% endfor %}
   </ul>
 
