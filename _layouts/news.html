@@ -13,7 +13,7 @@ layout: default
   <h3>
     {% assign categories_array = "" | split:"|" %}
     {% for post in site.posts %}
-        {{ post.label }}<br/>
+       label =  {{ post.label }}<br/>
     {% endfor %}
   </h3>
 section = {{page.section}}

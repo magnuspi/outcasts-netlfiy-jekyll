@@ -36,7 +36,7 @@ collections: # A list of collections the CMS should be able to edit
   # PRODUCTIONS
   - name: "production" # Used in routes, ie.: /admin/productions/:slug/edit
     label: "Productions" # Used in the UI, ie.: "New Production"
-    folder: "_posts/productions" # The path to the folder where the documents are stored
+    folder: "_posts/production" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -51,7 +51,7 @@ collections: # A list of collections the CMS should be able to edit
     # CLASSES
   - name: "class" # Used in routes, ie.: /admin/productions/:slug/edit
     label: "Classes" # Used in the UI, ie.: "New Production"
-    folder: "_posts/classes" # The path to the folder where the documents are stored
+    folder: "_posts/class" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
