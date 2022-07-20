@@ -52,6 +52,27 @@ defaults:
     values:
       layout: "post" # set the correct default template for a post
       section: "post" # set the root section name
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "productions" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post" # set the correct default template for a post
+      section: "productions" # set the root section name
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "news" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post" # set the correct default template for a post
+      section: "news" # set the root section name
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "classes" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post" # set the correct default template for a post
+      section: "classes" # set the root section name
 
 # Build settings
 markdown: kramdown
