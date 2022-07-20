@@ -86,9 +86,9 @@ exclude:
 
 #collections stuff
 collections:
-  class:
+  classes:
     output: true
-  production:
+  productions:
     output: true
   news:
     output: true

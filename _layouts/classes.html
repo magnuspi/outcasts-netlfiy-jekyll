@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<h2>{{ page.title }}</h2>
+
+{% include page-intro.html %}
+
+{{ content }}
+
+<section>
+
+  <h3>Current Classes</h3>
+    <ul>
+      {% for item in site.classes %}
+        
+
+            <li>
+              <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
+              <time datetime="{{ itpostem.date }}">
+                <small>
+                  <strong>{{ item.date | date_to_string }}</strong>
+ 
+                </small>
+              </time>
+              {{ post.excerpt | strip_newlines | truncate: 180 }}
+            </li>
+  
+      {% endfor %}
+    </ul>
+
+</section>

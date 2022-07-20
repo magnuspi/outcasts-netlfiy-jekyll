@@ -11,7 +11,7 @@ publish_mode: editorial_workflow # Enable drafts
 
 collections: # A list of collections the CMS should be able to edit
   # POSTS
-  - name: "story" # Used in routes, ie.: /admin/collections/:slug/edit
+  - name: "news" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "News" # Used in the UI, ie.: "New Post"
     folder: "_news" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
@@ -34,9 +34,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Categories", name: "categories", widget: "string", required: false}
   # PRODUCTIONS
-  - name: "production" # Used in routes, ie.: /admin/productions/:slug/edit
+  - name: "productions" # Used in routes, ie.: /admin/productions/:slug/edit
     label: "Productions" # Used in the UI, ie.: "New Production"
-    folder: "_production" # The path to the folder where the documents are stored
+    folder: "_productions" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -49,9 +49,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Categories", name: "categories", widget: "string", required: false}
     # CLASSES
-  - name: "class" # Used in routes, ie.: /admin/productions/:slug/edit
+  - name: "classes" # Used in routes, ie.: /admin/productions/:slug/edit
     label: "Classes" # Used in the UI, ie.: "New Production"
-    folder: "_class" # The path to the folder where the documents are stored
+    folder: "_classes" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
